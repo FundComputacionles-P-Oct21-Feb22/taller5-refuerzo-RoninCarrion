@@ -1,0 +1,79 @@
+Elaborar un algoritmo y una miniespecificación:
+En un restaurante de la ciudad de Loja, 
+se hace un descuento del 5% si el cliente tiene una edad mayor a cero y menor o igual a 20,
+ del 10% si el cliente tiene una edad mayor a 20 y menor o igual 30 años, 
+del 15% si la edad es mayor 30 años. 
+Elaborar un solución que pida como datos de entrada la edad  y el valor del plato 
+(un cliente solo pide un plato) 
+y luego calcule e imprima el subtotal por pagar y el total por pagar.
+
+// Algoritmo
+1. Inicio
+2. Ingresar la edad del cliente
+3. Ingresar el valor del plato
+4. Calcular el subtotal a pagar
+5. En caso de que la edad del cliente sea mayor a cero y menor o igual a 20 aplicar un descuento del 5%.
+6. En caso de que la edad del cliente sea mayor a 20 y menor o igual 30 años aplicar un descuento del 10%.
+7. En caso de que la edad del cliente sea mayor 30 año, aplicar un descuento del 15%.
+8. Restar al subtotal el descuento obtenido por el cliente.
+9. Mostrar el total a pagar.
+10. Si el cliente no tiene descuento presentar el subtotal como total a pagar.
+11. Fin
+
+// Miniespecificación
+1. Inicio
+// Declarar las variables
+2. edad_cliente, i[0,100]
+3. numero_platos, i[0,1] <-- 1
+4. valor_plato, d[0,n]
+5. porcentaje1, d[0,n] <-- 5
+6. porcentaje2, d[0,n] <-- 10
+7. porcentaje3, d[0,n] <-- 15
+8. descuento1, d[0,n]
+9. descuento2, d[0,n]
+10. descuento3, d[0,n]
+11. subtotal
+12. total_pagar
+// Ingresar datos por teclado 
+
+13. Escribir "Ingresar edad del cliente"
+14. Leer edad_cliente
+
+15. Escribir "Ingresar valor del plato"
+16. Leer valor_plato
+
+17. subtotal <-- valor_plato * numero_platos
+
+18. Si edad cliente > 0 && <= 20 entonces
+19. descuento1 = ( valor_plato * porcentaje1) / 100
+// valor plato <-- 100
+// porcentaje1 <-- 5
+20. total_pagar <-- subtotal - descuento1
+21. Escribir "El subtotal es: " + subtotal
+22. Escribir "El valor total a pagar es: " + total_pagar
+
+23. Si edad cliente > 20 && <= 30 entonces
+24. descuento2 = ( valor_plato * porcentaje2) / 100
+// valor plato <-- 100
+// porcentaje2 <-- 10
+25. total_pagar <-- subtotal - descuento1
+26. Escribir "El subtotal es: " + subtotal
+27. Escribir "El valor total a pagar es: " + total_pagar
+
+28. Caso contrario
+29. Si edad cliente > 30 entonces
+30. descuento3 = ( valor_plato * porcentaje3) / 100
+// valor plato <-- 100
+// porcentaje3 <-- 15
+31. total_pagar <-- subtotal - descuento3
+32. Escribir "El subtotal es: " + subtotal
+33. Escribir "El valor total a pagar es: " + total_pagar
+
+34. Caso contrario
+35. Si edad_cliente < 0 entonces
+36. Escribir "Edad no admitida"
+37. Fin si
+38. Fin si
+39. Fin si 
+40. Fin si
+41. Fin
